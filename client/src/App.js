@@ -13,6 +13,7 @@ function App() {
             const Layout = route.IsShowHeader ? DefaultComponents : Fragment;
             return (
               <Route
+                key={route.path}
                 path={route.path}
                 element={
                   <Layout>
