@@ -1,5 +1,6 @@
 import { Col } from "antd";
 import React from "react";
+
 import {
   WrapperHeader,
   WrapperHeaderAccount,
@@ -13,10 +14,10 @@ import {
   CaretDownOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
-const HeaderComponents = () => {
+const FooterComponents = () => {
   return (
     <div>
-      <WrapperHeader gutter={16}>
+      <WrapperHeader>
         <Col span={6}>
           <WrapperTextHeader>DKT Travel</WrapperTextHeader>
         </Col>
@@ -25,7 +26,7 @@ const HeaderComponents = () => {
             <Search
               placeholder="Nhập thông tin tìm kiếm..."
               allowClear
-              enterButton="Search"
+              enterButton="Tìm Kiếm"
               size="large"
             />
           </>
@@ -45,7 +46,7 @@ const HeaderComponents = () => {
             </div>
           </WrapperHeaderAccount>
           <div>
-            <div>
+            <div style={{ display: "flex" }}>
               <WrapperIconHeader>
                 <ShoppingCartOutlined />
               </WrapperIconHeader>
@@ -59,4 +60,4 @@ const HeaderComponents = () => {
   );
 };
 
-export default HeaderComponents;
+export default FooterComponents;
