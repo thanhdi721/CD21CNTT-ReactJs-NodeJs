@@ -1,12 +1,11 @@
-import { Col } from "antd";
+import { Badge, Col } from "antd";
 import React from "react";
 
 import {
   WrapperHeader,
-  WrapperHeaderAccount,
   WrapperTextHeader,
   WrapperTextHeaderSmall,
-  WrapperIconHeader,
+  WrapperHeaderAccout,
 } from "./style";
 import Search from "antd/es/input/Search";
 import {
@@ -35,7 +34,7 @@ const HeaderComponents = () => {
           span={6}
           style={{ display: "flex", gap: "20px", alignItems: "center" }}
         >
-          <WrapperHeaderAccount>
+          <WrapperHeaderAccout>
             <UserOutlined style={{ fontSize: "30px" }} />
             <div>
               <WrapperTextHeaderSmall>Đăng nhập/Đăng ký</WrapperTextHeaderSmall>
@@ -44,12 +43,14 @@ const HeaderComponents = () => {
                 <CaretDownOutlined />
               </div>
             </div>
-          </WrapperHeaderAccount>
+          </WrapperHeaderAccout>
           <div>
             <div style={{ display: "flex" }}>
-              <WrapperIconHeader>
-                <ShoppingCartOutlined />
-              </WrapperIconHeader>
+              <Badge count={4} size="small">
+                <ShoppingCartOutlined
+                  style={{ fontSize: "30px", color: "#fff" }}
+                />
+              </Badge>
 
               <WrapperTextHeaderSmall>Giỏ Hàng</WrapperTextHeaderSmall>
             </div>
