@@ -3,11 +3,16 @@ import ProductDetailsComponent from "../../components/ProductDetailsComponent/Pr
 
 const ProductDetailsPage = () => {
   return (
-    <div
-      style={{ padding: "0px 120px", background: "#efefef", height: "1000px" }}
-    >
-      <h4>Trang chu</h4>
-      <ProductDetailsComponent />
+    <div style={{ width: "100%", background: "#efefef", height: "100%" }}>
+      <div style={{ width: "1270px", height: "100%", margin: "0 auto" }}>
+        <h5>
+          <span style={{ cursor: "pointer", fontWeight: "bold" }}>
+            Trang chủ
+          </span>{" "}
+          - Chi tiết sản phẩm
+        </h5>
+        <ProductDetailsComponent />
+      </div>
     </div>
   );
 };

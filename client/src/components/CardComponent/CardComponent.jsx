@@ -8,6 +8,7 @@ import {
   WrapperDiscountText,
   WrapperPriceText,
   WrapperReporttext,
+  WrapperStyleTextSell,
 } from "./style";
 import genuine from "../../assets/images/genuine.png";
 
@@ -45,10 +46,10 @@ const CardComponents = () => {
             <span> 4.5</span>
             <StarFilled style={{ fontSize: "12px", color: "yellow" }} />
           </span>
-          <span> | da ban 1000+</span>
+          <WrapperStyleTextSell> | da ban 1000+</WrapperStyleTextSell>
         </WrapperReporttext>
         <WrapperPriceText>
-          10.000.000D
+          <span style={{ marginRight: "8px" }}>100.000.000</span>
           <WrapperDiscountText>-10%</WrapperDiscountText>
         </WrapperPriceText>
       </WrapperCardStyle>

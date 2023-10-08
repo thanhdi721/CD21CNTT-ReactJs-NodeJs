@@ -7,7 +7,7 @@ import {
   WrapperTextHeaderSmall,
   WrapperHeaderAccout,
 } from "./style";
-import Search from "antd/es/input/Search";
+import ButttonInputSearch from "../ButtonInputSearch/ButtonInputSearch";
 import {
   UserOutlined,
   CaretDownOutlined,
@@ -15,20 +15,27 @@ import {
 } from "@ant-design/icons";
 const HeaderComponents = () => {
   return (
-    <div>
+    <div
+      style={{
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        background: "#9255FD",
+        justifyContent: "center",
+      }}
+    >
       <WrapperHeader>
-        <Col span={6}>
+        <Col span={5}>
           <WrapperTextHeader>DKT Travel</WrapperTextHeader>
         </Col>
-        <Col span={12}>
-          <>
-            <Search
-              placeholder="Nhập thông tin tìm kiếm..."
-              allowClear
-              enterButton="Tìm Kiếm"
-              size="large"
-            />
-          </>
+        <Col span={13}>
+          <ButttonInputSearch
+            size="large"
+            bordered={false}
+            textbutton="Tìm kiếm"
+            placeholder="input search text"
+            backgroundColorButton="#5a20c1"
+          />
         </Col>
         <Col
           span={6}

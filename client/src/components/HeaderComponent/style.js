@@ -8,7 +8,7 @@ export const WrapperHeader = styled(Row)`
   gap: 16px;
   flex-wrap: nowrap;
   width: 1270px;
-  padding: 10px 120px;
+  padding: 10px 0;
 `;
 
 export const WrapperTextHeader = styled(Link)`

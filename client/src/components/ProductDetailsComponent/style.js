@@ -1,7 +1,7 @@
-import { Col, Image, InputNumber } from "antd";
+import { Col, InputNumber } from "antd";
 import styled from "styled-components";
 
-export const WrapperStyleImageSmall = styled(Image)`
+export const WrapperStyleImageSmall = styled.img`
   height: 64px;
   width: 64px;
 `;
@@ -58,17 +58,17 @@ export const WrapperAddressProduct = styled.div`
 `;
 
 export const WrapperQualityProduct = styled.div`
-  display: flex;
+  display: block;
   gap: 4px;
   align-items: center;
-  width: 120px;
+  width: 110px;
   border: 1px solid #ccc;
   border-radius: 4px;
 `;
 
 export const WrapperInputNumber = styled(InputNumber)`
-  &.ant-input-number.ant-input-number-sm {
-    width: 40px;
+  &.ant-input-number.css-dev-only-do-not-override-pr0fja {
+    width: 45px;
     border-top: none;
     border-bottom: none;
     .ant-input-number-handler-wrap {
