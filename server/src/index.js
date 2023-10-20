@@ -3,16 +3,14 @@ const app = express();
 const dotenv = require("dotenv");
 const port = 3001;
 const mongoose = require("mongoose");
+const routes = require("./routes");
+const bodyParser = require("body-parser");
 dotenv.config();
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+app.use(bodyParser.json);
+routes(app);
 
-console.log("process.env.MONGO_DB", process.env.MONGO_DB);
 mongoose
-  .connect(
-    `mongodb+srv://dkttravel:${process.env.MONGO_DB}@cluster0.nyoileh.mongodb.net/?retryWrites=true&w=majority`
-  )
+  .connect(`${process.env.MONGO_DB}`)
   .then(() => {
     console.log("COnnect DB success!");
   })
