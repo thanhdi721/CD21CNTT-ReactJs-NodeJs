@@ -9,9 +9,14 @@ import { useState } from "react";
 import imageLogo from "../../assets/images/slider1.png";
 import { Image } from "antd";
 import InputForm from "../../components/InputForm/InputFrom";
+import { useNavigate } from "react-router-dom";
 
 const SignInPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const handleNavigateSignUp = () => {
+    navigate("/sign-up");
+  };
   return (
     <div
       style={{
@@ -77,7 +82,10 @@ const SignInPage = () => {
           </p>
           <p>
             Chưa có tài khoản?{" "}
-            <WrapperTextLight> Tạo tài khoản</WrapperTextLight>
+            <WrapperTextLight onClick={handleNavigateSignUp}>
+              {" "}
+              Tạo tài khoản
+            </WrapperTextLight>
           </p>
         </WrapperContainerLeft>
         <WrapperContainerRight>

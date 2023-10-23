@@ -1,6 +1,7 @@
 import { Badge, Col } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import {
   WrapperHeader,
   WrapperTextHeader,
@@ -39,7 +40,6 @@ const HeaderComponents = () => {
             bordered={false}
             textbutton="Tìm kiếm"
             placeholder="input search text"
-            backgroundColorButton="#5a20c1"
           />
         </Col>
         <Col

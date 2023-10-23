@@ -9,8 +9,13 @@ import { useState } from "react";
 import imageLogo from "../../assets/images/slider1.png";
 import { Image } from "antd";
 import InputForm from "../../components/InputForm/InputFrom";
+import { useNavigate } from "react-router-dom";
 const SignUpPage = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
+  const navigate = useNavigate();
+  const handleNavigateSignIn = () => {
+    navigate("/sign-in");
+  };
   return (
     <div
       style={{
@@ -51,6 +56,10 @@ const SignUpPage = () => {
               placeholder="password"
               type={isShowPassword ? "text" : "password"}
             />
+            <InputForm
+              placeholder="comfirm password"
+              type={isShowPassword ? "text" : "password"}
+            />
           </div>
 
           <ButtonComponent
@@ -75,7 +84,11 @@ const SignUpPage = () => {
             <WrapperTextLight>Quên mật khẩu?</WrapperTextLight>
           </p> */}
           <p>
-            Bạn đã có tài khoản <WrapperTextLight> Đăng nhập</WrapperTextLight>
+            Bạn đã có tài khoản{" "}
+            <WrapperTextLight onClick={handleNavigateSignIn}>
+              {" "}
+              Đăng nhập
+            </WrapperTextLight>
           </p>
         </WrapperContainerLeft>
         <WrapperContainerRight>
